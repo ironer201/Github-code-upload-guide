@@ -50,20 +50,7 @@ id_ed25519.pub
 ```
 
 - If **both files exist**, you already have a key — skip to [Test the connection](#test-the-connection).
-- If the folder doesn't exist or is empty, generate a new key:
-
-```bash
-ssh-keygen -t ed25519 -C "your_email@example.com"
-```
-
-You'll be prompted for:
-
-| Prompt | What to do |
-|---|---|
-| `Enter a file in which to save the key` | Press **Enter** to accept the default path |
-| `Enter passphrase` | Optional — press **Enter** for none, or set one for extra security |
-
-If you've never done this before and want step-by-step help (adding the key to the SSH agent, then linking it to your GitHub account), use this prompt with an AI assistant:
+- If the folder doesn't exist or is empty, Copy the prompt and paste it to AI:
 
 > I am a new github user and I want to upload code to github repos but I don't know how. I didn't setup the SSH key so please tell me the setup to show me the process to add SSH key to my computer
 
