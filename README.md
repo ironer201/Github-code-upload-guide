@@ -207,11 +207,11 @@ touch .gitignore
 Common entries:
 
 ```
-node_modules/
-.env
-__pycache__/
+echo "node_modules/
 dist/
-.DS_Store
+.env
+*.log
+.DS_Store" > .gitignore
 ```
 
 GitHub maintains ready-made templates at [github.com/github/gitignore](https://github.com/github/gitignore) — grab the one matching your stack.
