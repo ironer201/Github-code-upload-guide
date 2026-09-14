@@ -6,8 +6,8 @@ A clean, no-nonsense guide for getting a local project onto GitHub using only th
 
 ## Table of Contents
 
-1. [Prerequisites](#1-prerequisites)
-2. [SSH Key Setup](#2-ssh-key-setup)
+1. [Status Check](#1-Status-check)
+2. [Check SSH Key Setup](#2-check-ssh-key-setup)
 3. [Configure Git Identity](#3-configure-git-identity)
 4. [Initialize the Repository](#4-initialize-the-repository)
 5. [Stage and Commit Changes](#5-stage-and-commit-changes)
@@ -18,7 +18,7 @@ A clean, no-nonsense guide for getting a local project onto GitHub using only th
 
 ---
 
-## 1. Prerequisites
+## 1. Stack Check
 
 Check whether Git is installed:
 
@@ -32,7 +32,7 @@ git --version
 
 ---
 
-## 2. SSH Key Setup
+## 2. Check SSH Key Setup
 
 SSH keys let you push/pull from GitHub without typing a password every time.
 
@@ -63,22 +63,9 @@ You'll be prompted for:
 | `Enter a file in which to save the key` | Press **Enter** to accept the default path |
 | `Enter passphrase` | Optional — press **Enter** for none, or set one for extra security |
 
-### Add the key to the SSH agent
+If you've never done this before and want step-by-step help (adding the key to the SSH agent, then linking it to your GitHub account), use this prompt with an AI assistant:
 
-```bash
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
-```
-
-### Add the public key to GitHub
-
-Copy the public key to your clipboard:
-
-```bash
-cat ~/.ssh/id_ed25519.pub
-```
-
-Then go to **GitHub → Settings → SSH and GPG keys → New SSH key**, paste it in, and save.
+> I am a new github user and I want to upload code to github repos but I don't know how. I didn't setup the SSH key so please tell me the setup to show me the process to add SSH key to my computer
 
 ### Test the connection
 
@@ -207,11 +194,11 @@ touch .gitignore
 Common entries:
 
 ```
-echo "node_modules/
-dist/
+node_modules/
 .env
-*.log
-.DS_Store" > .gitignore
+__pycache__/
+dist/
+.DS_Store
 ```
 
 GitHub maintains ready-made templates at [github.com/github/gitignore](https://github.com/github/gitignore) — grab the one matching your stack.
