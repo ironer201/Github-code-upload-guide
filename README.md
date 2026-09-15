@@ -18,7 +18,7 @@ A clean, no-nonsense guide for getting a local project onto GitHub using only th
 
 ---
 
-## 1. Stack Check
+## 1. Status Check
 
 Check whether Git is installed:
 
